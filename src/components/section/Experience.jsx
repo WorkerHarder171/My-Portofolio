@@ -62,9 +62,9 @@ import {
     return (
       <>
         <div id="experience" className="w-full flex flex-col justify-center items-center text-center bg-[#151817] p-10">
-          <p className="text-[#5BA97D] text-center text-6xl">MyExperience</p>
-          <p className="leads text-[#FDFDFD] text-6xl mt-2.5 mb-10">Linear Timeline</p>
-          <p className="text-[#7B8480] text-2xl mb-14 max-w-xl">
+          <p className="text-[#5BA97D] text-center lg:text-6xl sm:text-4xl">MyExperience</p>
+          <p className="leads text-[#FDFDFD] lg:text-6xl sm:text-4xl mt-2.5 lg:mb-10 sm:mb-5">Linear Timeline</p>
+          <p className="text-[#7B8480] lg:text-2xl sm:text-lg mb-14 max-w-xl">
             This is a timeline of my educational, organizational and work journey
           </p>
           <div className="wrapper w-full">

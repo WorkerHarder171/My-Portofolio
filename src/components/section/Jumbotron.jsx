@@ -3,9 +3,7 @@ import { useEffect } from "react";
 
 export default function Jumbotron() {
   useEffect(() => {
-    // Mengecek apakah particlesJS tersedia di window
     if (window?.particlesJS) {
-      // Menginisialisasi particles.js dengan konfigurasi langsung
       window.particlesJS('particles-js', {
         particles: {
           number: { value: 100, density: { enable: true, value_area: 800 } },
@@ -47,28 +45,25 @@ export default function Jumbotron() {
 
   return (
     <>
-      {/* Div untuk particles.js */}
       <div
         id="particles-js"
         className="absolute inset-0 my-auto mx-auto z-10"
       />
 
-      {/* Konten utama jumbotron */}
       <div id="home" className="h-screen flex flex-col justify-center items-center relative z-0">
         <div className="text-center text-white">
-          <p className="text-7xl capitalize leading-snug font-roboto mx-auto pt-12">
+          <p className="lg:text-7xl md:text-4xl sm:text-2xl capitalize leading-snug font-roboto mx-auto pt-12">
             Hey There! <br /> I'm Dady Bima Nur Sejati. <br /> A Frontend React
             Developer. <br /> Based in Temanggung
           </p>
-          <p className="text-2xl text-[#828A88] my-10 max-w-3xl mx-auto">
+          <p className="lg:text-2xl md:text-lg sm:text-sm text-[#828A88] my-10 lg:max-w-3xl sm:max-w-md mx-auto">
             I'm a self-taught frontend developer who loves to build beautiful
             and functional websites.
           </p>
         </div>
       </div>
 
-      {/* Tombol dan ikon panah di bagian bawah */}
-      <div className="text-center mt-10 absolute bottom-10 z-10 mx-auto w-full">
+      <div className="text-center lg:mt-10 absolute lg:bottom-10 sm:bottom-24 z-10 mx-auto w-full">
         <button className="capitalize text-white px-10 py-2.5 border border-white rounded-full duration-300 hover:bg-white hover:text-[#333]">
           Get in Touch
         </button>

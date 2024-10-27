@@ -17,8 +17,8 @@ export default function About() {
 
   return (
     <>
-      <div id="about" className="w-full flex flex-col justify-center items-center h-screen bg-[#151817] text-center relative z-0">
-        <div className="mx-auto w-8/12 border border-[#2D302F] p-10 grid grid-cols-2 justify-center items-center rounded-[10px]">
+      <div id="about" className="w-full flex flex-col justify-center items-center  bg-[#151817] text-center relative z-0 sm:mt-24">
+        <div className="mx-auto lg:w-8/12 sm:w-10/12 border border-[#2D302F] lg:p-10 sm:p-5 grid md:grid-cols-2 sm:grid-cols-1 justify-center items-center rounded-[10px]">
           <div className="img-group">
             <img className="mx-auto w-5/12" src={image} alt="image" />
           </div>
@@ -37,11 +37,11 @@ export default function About() {
           </div>
         </div>
 
-        <div className="wrapper w-8/12 border-b border-[#2D302F] p-28 relative">
-          <p className="text-4xl text-white capitalize text-[#7B8480]">
+        <div className="wrapper lg:w-8/12 sm:w-10/12 border-b border-[#2D302F] lg:p-28 sm:p-14 relative">
+          <p className="lg:text-4xl sm:text-2xl text-white capitalize text-[#7B8480]">
             My Skills Frontend Developer
           </p>
-          <ul className="w-10/12 list-icon text-white flex justify-evenly items-center mt-20 mx-auto">
+          <ul className="lg:w-10/12 sm:w-11/12 list-icon text-white md:flex sm:grid sm:grid-cols-3 md:justify-evenly sm:justify-center items-center mt-20 mx-auto">
             {skills.map((skill, index) => (
               <li
                 key={index}

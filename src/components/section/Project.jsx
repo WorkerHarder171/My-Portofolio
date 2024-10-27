@@ -55,12 +55,12 @@ export default function Project() {
 
   return (
     <div id="projects" className="container h-screen mx-auto flex flex-col gap-10 justify-center items-center">
-      <p className="project text-center text-white text-6xl">My Projects</p>
-      <p className="text-[#7B8480] text-2xl mb-14 max-w-2xl text-center">
+      <p className="project text-center text-white lg:text-6xl sm:text-4xl">My Projects</p>
+      <p className="text-[#7B8480] lg:text-2xl lg:mb-14 sm:mb-7 max-w-2xl text-center">
         These are my projects that I have created so far, whether from practice
         or from client projects
       </p>
-      <div className="w-8/12 mx-auto overflow-hidden">
+      <div className="lg:w-8/12 sm:w-10/12 mx-auto overflow-hidden">
         <Slider {...settings}>
           {img.map((item, id) => (
             <div className="px-2.5" key={id}>
