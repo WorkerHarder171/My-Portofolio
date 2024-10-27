@@ -63,7 +63,7 @@ export default function Jumbotron() {
         </div>
       </div>
 
-      <div className="text-center sm:mt-10 absolute lg:bottom-10 sm:bottom-24 z-10 mx-auto w-full">
+      <div className="text-center lg:mt-10 sm:mt-20 absolute lg:bottom-10 sm:bottom-24 z-10 mx-auto w-full">
         <button className="capitalize text-white px-10 py-2.5 border border-white rounded-full duration-300 hover:bg-white hover:text-[#333]">
           Get in Touch
         </button>
