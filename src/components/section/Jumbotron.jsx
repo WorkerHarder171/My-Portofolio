@@ -56,7 +56,7 @@ export default function Jumbotron() {
             Hey There! <br /> I'm Dady Bima Nur Sejati. <br /> A Frontend React
             Developer. <br /> Based in Temanggung
           </p>
-          <p className="lg:text-2xl md:text-lg sm:text-sm text-[#828A88] my-10 lg:max-w-3xl sm:max-w-md mx-auto">
+          <p className="lg:text-2xl md:text-lg sm:text-sm text-[#828A88] my-10 lg:max-w-3xl sm:max-w-[280px] mx-auto">
             I'm a self-taught frontend developer who loves to build beautiful
             and functional websites.
           </p>
