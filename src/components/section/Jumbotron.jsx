@@ -1,5 +1,6 @@
 import { SlArrowDown } from "react-icons/sl";
 import { useEffect } from "react";
+import particlesJS from "particles.js";
 
 export default function Jumbotron() {
   useEffect(() => {
@@ -9,7 +10,10 @@ export default function Jumbotron() {
       });
     }
   }, []);
-
+  
+  particlesJS.load('particles-js', '/public/particlesConfig.json', function() {
+    console.log('callback - particles.js config loaded')
+});
   return (
     <>
       <div
@@ -36,6 +40,7 @@ export default function Jumbotron() {
           </button>
           <SlArrowDown className="text-white text-3xl mt-10 mx-auto" />
         </div>
+        
     </>
   );
 }
