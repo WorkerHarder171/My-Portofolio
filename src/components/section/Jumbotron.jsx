@@ -54,7 +54,7 @@ export default function Jumbotron() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="lg:text-7xl md:text-4xl sm:text-2xl capitalize leading-snug font-roboto mx-auto pt-12"
+            className="lg:text-7xl md:text-4xl sm:text-2xl capitalize leading-snug font-roboto mx-auto lg:pt-12 sm:pt-0"
           >
             Hey There! <br /> I'm Dady Bima Nur Sejati. <br /> A Frontend React
             Developer. <br /> Based in Temanggung
@@ -64,7 +64,7 @@ export default function Jumbotron() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
-            className="lg:text-2xl md:text-lg sm:text-sm text-[#828A88] my-10 lg:max-w-3xl sm:max-w-[280px] mx-auto"
+            className="lg:text-2xl md:text-lg sm:text-sm text-[#828A88] lg:my-10 sm:my-5 lg:max-w-3xl sm:max-w-[280px] mx-auto"
           >
             I'm a self-taught frontend developer who loves to build beautiful
             and functional websites.
