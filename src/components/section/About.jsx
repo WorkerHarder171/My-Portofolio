@@ -17,7 +17,7 @@ export default function About() {
 
   return (
     <>
-      <div className="w-full flex flex-col justify-center items-center h-screen bg-[#151817] text-center relative z-0">
+      <div id="about" className="w-full flex flex-col justify-center items-center h-screen bg-[#151817] text-center relative z-0">
         <div className="mx-auto w-8/12 border border-[#2D302F] p-10 grid grid-cols-2 justify-center items-center rounded-[10px]">
           <div className="img-group">
             <img className="mx-auto w-5/12" src={image} alt="image" />

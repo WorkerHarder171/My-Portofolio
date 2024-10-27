@@ -3,21 +3,27 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import erd from "@/assets/E-RD.jpg";
 import recything from "@/assets/recything.jpg";
-
+import siDihimens from "@/assets/sidihimens.png";
 
 export default function Project() {
   const img = [
     {
       id: 1,
       name: "Recything",
-      src: erd,
-      desc: "Recything is a website that provides information about waste management and recycling. This website was created using the Next Js framework and Tailwind CSS",
+      src: recything,
+      desc: "Recything is a website that provides information about waste management and recycling. This website was created using the React Js framework and Tailwind CSS",
     },
     {
       id: 2,
       name: "Si-Dihimens",
-      src: recything,
-      desc: "Si-Dihimens is a website that provides information about the latest information on the world of health. This website was created using the Next Js framework and Tailwind CSS",
+      src: siDihimens,
+      desc: "Si-Dihimens is a website that provides information about the latest information on the world of health. This website was created using the React Js framework and Tailwind CSS",
+    },
+    {
+      id: 3,
+      name: "E-RD",
+      src: erd,
+      desc: "E-RD is a website that provides information about waste management and recycling. This website was created using the React Js framework and Tailwind CSS",
     },
   ];
 
@@ -41,11 +47,14 @@ export default function Project() {
   };
 
   const truncateText = (text, wordLimit) => {
-    return text.split(" ").slice(0, wordLimit).join(" ") + (text.split(" ").length > wordLimit ? "..." : "");
+    return (
+      text.split(" ").slice(0, wordLimit).join(" ") +
+      (text.split(" ").length > wordLimit ? "..." : "")
+    );
   };
 
   return (
-    <div className="container h-screen mx-auto flex flex-col gap-10 justify-center items-center">
+    <div id="projects" className="container h-screen mx-auto flex flex-col gap-10 justify-center items-center">
       <p className="project text-center text-white text-6xl">My Projects</p>
       <p className="text-[#7B8480] text-2xl mb-14 max-w-2xl text-center">
         These are my projects that I have created so far, whether from practice
@@ -63,9 +72,7 @@ export default function Project() {
                 />
                 <div className="wrapper absolute bottom-0 p-5 bg-[#333] w-full rounded-b-[10px]">
                   <h3 className="text-white text-xl">{item.name}</h3>
-                  <p className="text-[#7B8480]">
-                    {truncateText(item.desc, 8)}
-                  </p>
+                  <p className="text-[#7B8480]">{truncateText(item.desc, 8)}</p>
                 </div>
               </div>
             </div>
