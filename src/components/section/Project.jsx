@@ -1,6 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 import erd from "@/assets/E-RD.jpg";
 import recything from "@/assets/recything.jpg";
 import siDihimens from "@/assets/sidihimens.png";
@@ -64,17 +65,23 @@ export default function Project() {
         <Slider {...settings}>
           {img.map((item, id) => (
             <div className="px-2.5" key={id}>
-              <div className="card w-full border h-[300px] rounded-[10px] border-[#2D302F] relative">
+              <motion.div
+                className="card w-full border h-[300px] rounded-[10px] border-[#2D302F] relative"
+                initial={{ opacity: 0, y: 20 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                exit={{ opacity: 0, y: 20 }} 
+                transition={{ duration: 0.5 }} 
+              >
                 <img
                   src={item.src}
-                  alt="random image"
+                  alt={item.name}
                   className="w-full h-full object-cover rounded-[10px]"
                 />
                 <div className="wrapper absolute bottom-0 p-5 bg-[#333] w-full rounded-b-[10px]">
                   <h3 className="text-white text-xl">{item.name}</h3>
                   <p className="text-[#7B8480]">{truncateText(item.desc, 8)}</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </Slider>
