@@ -1,6 +1,7 @@
 import { SlArrowDown } from "react-icons/sl";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 export default function Jumbotron() {
   useEffect(() => {
@@ -73,12 +74,14 @@ export default function Jumbotron() {
       </div>
 
       <div className="text-center sm:mt-10 absolute lg:bottom-10 sm:bottom-16 z-10 mx-auto w-full">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          className="capitalize text-white px-10 py-2.5 border border-white rounded-full duration-300 hover:bg-white hover:text-[#333]"
-        >
-          Get in Touch
-        </motion.button>
+        <Link to="get-in-touch" smooth={true} duration={500}>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            className="capitalize text-white px-10 py-2.5 border border-white rounded-full duration-300 hover:bg-white hover:text-[#333]"
+          >
+            Get in Touch
+          </motion.button>
+        </Link>
 
         <motion.div
           initial={{ y: 0 }}
