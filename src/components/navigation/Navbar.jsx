@@ -15,9 +15,9 @@ export default function Navbar() {
 
   return (
     <div className="flex justify-between items-center w-full px-4 sm:px-8 md:px-16 lg:px-32 py-6 border-b border-[#2D302F] bg-[#151817] fixed z-20">
-      <div className="navbar-brand text-3xl font-semibold text-[#FDFDFD]">
+      <a href="#home" className="navbar-brand text-3xl font-semibold text-[#FDFDFD]">
         dybim__
-      </div>
+      </a>
       
       {/* Desktop Menu */}
       <ul className="hidden lg:flex navbar-nav w-7/12 justify-evenly items-center text-[#FDFDFD]">
