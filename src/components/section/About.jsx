@@ -3,6 +3,7 @@ import { FaHtml5, FaCss3Alt, FaReact, FaBootstrap } from "react-icons/fa";
 import { SiVite, SiRedux, SiAxios } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
+import { fadeIn } from "@/js/fadeIn";
 
 export default function About() {
   const skills = [
@@ -16,31 +17,22 @@ export default function About() {
     { icon: <SiAxios />, color: "#671DDF" },
   ];
 
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const skillVariants = {
-    hidden: { opacity: 0, scale: 0.5 },
-    visible: { opacity: 1, scale: 1 },
-  };
-
   return (
     <>
       <motion.div
         id="about"
-        className="w-full flex flex-col justify-center items-center bg-[#151817] text-center relative z-0 sm:mt-24"
-        variants={containerVariants}
+        variants={fadeIn("up", 0.3)}
         initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.5 }} 
+        whileInView={"show"}
+        // viewport={{ once: false, amount: 0.2 }}
+        className="w-full flex flex-col justify-center items-center bg-[#151817] text-center relative z-0 sm:mt-24"
       >
         <motion.div
-          className="mx-auto lg:w-8/12 sm:w-10/12 border border-[#2D302F] lg:p-10 sm:p-5 grid md:grid-cols-2 sm:grid-cols-1 justify-center items-center rounded-[10px]"
-          variants={containerVariants}
-        >
+         variants={fadeIn("left", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+
+         className="mx-auto lg:w-8/12 sm:w-10/12 border border-[#2D302F] lg:p-10 sm:p-5 grid md:grid-cols-2 sm:grid-cols-1 justify-center items-center rounded-[10px]">
           <div className="img-group">
             <img className="mx-auto w-5/12" src={image} alt="image" />
           </div>
@@ -60,28 +52,24 @@ export default function About() {
         </motion.div>
 
         <motion.div
+          variants={fadeIn("right", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+
           className="wrapper lg:w-8/12 sm:w-10/12 border-b border-[#2D302F] lg:p-28 sm:p-14 relative"
-          variants={containerVariants}
         >
           <p className="lg:text-4xl sm:text-2xl text-white capitalize text-[#7B8480]">
             My Skills Frontend Developer
           </p>
           <ul className="lg:w-10/12 sm:w-11/12 list-icon text-white md:flex sm:grid sm:grid-cols-3 md:justify-evenly sm:justify-center items-center mt-20 mx-auto">
             {skills.map((skill, index) => (
-              <motion.li
+              <li
                 key={index}
                 className="list-item text-6xl"
                 style={{ color: skill.color }}
-                variants={skillVariants}
-                initial="hidden"
-                animate="visible"
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1, 
-                }}
               >
                 {skill.icon}
-              </motion.li>
+              </li>
             ))}
           </ul>
         </motion.div>
