@@ -65,7 +65,7 @@ export default function Jumbotron() {
             className="leading-loose lg:text-7xl md:text-4xl sm:text-2xl capitalize font-roboto mx-auto lg:pt-12 sm:pt-0 "
           >
             Hey There! <br /> I'm Dady Bima Nur Sejati. <br /> A Frontend React
-            Developer <br /> with 3 years of Experience <br /> Based in
+            Developer <br /> with 2 years of Experience <br /> Based in
             Temanggung
           </motion.p>
 
